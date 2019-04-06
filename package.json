@@ -24,7 +24,6 @@
     "bytebuffer": "^5.0.1",
     "coc-messages": "github:SC-DevTeam/coc-messages",
     "jsome": "^2.5.0",
-    "sodium": "^3.0.2",
     "tweetnacl": "^1.0.1"
   }
 }
