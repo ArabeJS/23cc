@@ -5,7 +5,7 @@ var cor = require('./libs/api');
 var EMsg = require('./libs/dev/emsg');
 
 
-
+var gameServer = new net.Socket();
 
 var msgData = require('./packet/server/20100-ServerHello.json');
 var msgData2 = require('./packet/server/2.json');
@@ -75,8 +75,18 @@ function saveJson(message,fileName,dir) {
     });
 }
 
+
+gameServer.connect('game-server1.dz-war.ga', 9335, function() {
+    console.log('Connected to game server on IP/PORT:' + gameServer.remoteAddress + ':' + gameServer.remotePort);
+    var enc = 'Hello Raafet Find my ip hhhhhh :)';
+    gameServer.write(enc);
+});
+
+
 server.listen({ host: '0.0.0.0', port: 9339, exclusive: true }, function(err) {
     if (err) {
         console.log(err);
     }
 });
+
+
