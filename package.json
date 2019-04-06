@@ -1,0 +1,30 @@
+{
+  "name": "rwo-server",
+  "version": "1.0.0",
+  "description": "Raafet War Onlin MMO Game Server",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raafet/row.git"
+  },
+  "keywords": [
+    "Server"
+  ],
+  "author": "Raafet Lahmar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Raafet/row/issues"
+  },
+  "homepage": "https://github.com/Raafet/row#readme",
+  "dependencies": {
+    "blake2": "^2.0.1",
+    "bytebuffer": "^5.0.1",
+    "coc-messages": "github:SC-DevTeam/coc-messages",
+    "jsome": "^2.5.0",
+    "sodium": "^3.0.2",
+    "tweetnacl": "^1.0.1"
+  }
+}
