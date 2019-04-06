@@ -104,22 +104,12 @@ var msgData = require('./packet/client/10100-ClientHello.json');
 
 gameServer.connect(srvPORT, srvIP, function() {
     console.log('Connected to game server on IP/PORT:' + gameServer.remoteAddress + ':' + gameServer.remotePort);
-    var enc = cor.clientEncrypt(msgData);
-    gameServer.write(enc);
+    gameServer.write('hi');
 });
 
 
 gameServer.on("data", function(chunk) {
-	cor.clientDecrypt(chunk,function(data) {
-		var message = data.d;
-		console.log("=======================================");
-		console.log("===========|Message Decoded|===========");
-		console.log("=======================================");
-		jsome(message);
-		console.log("=======================================");
-		var fileName = message.messageType+'-'+EMsg[message.messageType];
-		saveJson(message,fileName,'server');
-	});
+	
 });
 
 
