@@ -13,7 +13,7 @@ var gameServer = new net.Socket();
 
 
 
-var msgData = require('../packet/client/10100-ClientHello.json');
+var msgData = require('./packet/client/10100-ClientHello.json');
 
 
 gameServer.connect(srvPORT, srvIP, function() {
