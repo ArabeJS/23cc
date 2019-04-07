@@ -1,5 +1,4 @@
 var cor = require('./libs/api');
-var sodium = require('sodium').api;
 var jsome = require('jsome');
 const Nonce = require('./libs/dev/nonce.js');
 
